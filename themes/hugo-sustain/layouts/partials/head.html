@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ .Site.Params.Author }}" />
-    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:title" content='{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}{{- if eq $url "/" -}}{{- .Site.Title -}}{{- else -}}{{- if .Params.heading -}} {{- .Params.heading -}} {{- else -}} {{- .Title -}} {{- end -}}{{- end -}}'>
     <meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}img/blog/{{.Params.image}}{{ else }}{{.Site.BaseURL}}img/profile.jpg{{ end }}">
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
