@@ -3,7 +3,7 @@ languageCode = "en-GB"
 title = "Gideon Pyzer - Web Developer"
 disqusShortname = "gideonpyzer"
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-75005144-1"
 theme = "hugo-sustain"
 
 [permalinks]
