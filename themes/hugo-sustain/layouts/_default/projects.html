@@ -1,0 +1,26 @@
+<section id="projects">
+  <div class="container">
+    <h3>{{ .Site.Data.projects.name_my }}</h3>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      {{ range $i, $el := .Site.Data.projects.my }}
+        <h5>
+          <i class="{{ .icon }}"></i>&nbsp;&nbsp;
+          <strong><a href="{{ .link }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
+        </h5>
+      {{ end }}
+      </div>
+    </div>
+    <h3>{{ .Site.Data.projects.name_contributions }}</h3>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      {{ range $i, $el := .Site.Data.projects.contributions }}
+        <h5>
+          <i class="{{ .icon }}"></i>&nbsp;&nbsp;
+          <strong><a href="{{ .link }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
+        </h5>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

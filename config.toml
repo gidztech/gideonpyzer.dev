@@ -1,0 +1,38 @@
+baseurl = "https://www.gideonpyzer.com"
+languageCode = "en-GB"
+title = "Gideon Pyzer - Web Developer"
+disqusShortname = "gideonpyzer"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "profile.jpg"
+  author = "Gideon Pyzer"
+  description = "I'm a London based Front End Web Developer, currently working for Huddle, a cloud-based collaboration software company."
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "gidztech"
+  Email         = "gjpyzer@gmail.com"
+  Twitter       = "gidztech"
+  LinkedIn      = "gideon-pyzer-87a14539"
+  Stackoverflow = "gidztech"
+
+## Main Menu
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"

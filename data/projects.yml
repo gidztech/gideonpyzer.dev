@@ -1,0 +1,41 @@
+name_my: My Projects
+name_contributions: Contributions
+my:
+  - 
+    name: Muppeteer
+    icon: fa fa-github
+    link: https://github.com/HuddleEng/Muppeteer/
+    description: Visual regression testing framework for running tests in Chrome
+  - 
+    name: Jest Puppeteer Docker
+    icon: fa fa-github
+    link: https://github.com/gidztech/jest-puppeteer-docker
+    description:  Jest plugin that allows you to run your Jest tests against a Chrome instance running in Docker
+  -
+    name: Simple list item range selector
+    icon: fa fa-github
+    link: https://github.com/gidztech/simple-list-item-range-selector
+    description: Small UI library that allows you to take a list of items, e.g. `<li>`s, and attach selection events to it.
+  -
+    name: How to use a Mac textfield
+    icon: fa fa-github
+    link: https://github.com/gidztech/how-to-use-a-mac-textfield
+    description: Learn how to use a keyboard shortcuts on textfields on a Mac.
+contributions:
+  - 
+    name: Jest Puppeteer
+    icon: fa fa-github
+    link: https://github.com/gidztech/jest-puppeteer
+    description: Run your tests using Jest & Puppeteer
+  - 
+    name: Branding Webpack Plugin
+    icon: fa fa-github
+    link: https://github.com/HuddleEng/branding-webpack-plugin
+    description: Use CSS custom properties to theme your app with fallbacks for older browsers 
+  - 
+    name: Javascript Breakpoint Collection
+    icon: fa fa-github
+    link: https://github.com/mattzeunert/javascript-breakpoint-collection
+    description: Find what code is causing a browser behavior
+
+    
