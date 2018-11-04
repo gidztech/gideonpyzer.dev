@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/favicon.ico">
     <title>
     {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
-    {{- if eq $url "/" -}}
+    {{- if eq $url "" -}}
         {{- .Site.Title -}}
     {{- else -}}
         {{- .Title -}} &nbsp; | &nbsp; {{- .Site.Params.shortTitle -}} 
