@@ -5,6 +5,7 @@ disqusShortname = "gideonpyzer"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-75005144-1"
 theme = "hugo-sustain"
+pluralizeListTitles = false
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
@@ -12,6 +13,7 @@ theme = "hugo-sustain"
 [params]
   avatar = "profile.jpg"
   author = "Gideon Pyzer"
+  shortTitle = "Gideon Pyzer"
   description = "I'm a London based Front End Web Developer, currently working for Huddle, a cloud-based collaboration software company."
 
   # Custom assets can be linked with their paths relative to static/
@@ -27,12 +29,12 @@ theme = "hugo-sustain"
 
 ## Main Menu
 [[menu.main]]
-  name = "blog"
+  name = "Blog"
   weight = 100
   identifier = "blog"
   url = "/blog/"
 [[menu.main]]
-  name = "projects"
+  name = "Projects"
   identifier = "projects"
   weight = 200
   url = "/projects/"

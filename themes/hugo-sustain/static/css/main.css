@@ -37,6 +37,7 @@ html, body {
 }
 .navbar-default .navbar-nav > li > a {
   color: #6b6b6b;
+  text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #6b6b6b;
