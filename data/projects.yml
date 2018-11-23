@@ -2,25 +2,25 @@ name_my: Projects
 name_contributions: Contributions
 my:
   - 
+    name: Jest Puppeteer Docker
+    icon: fa fa-github
+    link: https://github.com/gidztech/jest-puppeteer-docker
+    description:  Jest preset plugin that allows you to run your Jest tests against a Chromium instance running in Docker
+  - 
     name: Muppeteer
     icon: fa fa-github
     link: https://github.com/HuddleEng/Muppeteer/
     description: Visual regression testing framework for running tests in Chrome
-  - 
-    name: Jest Puppeteer Docker
-    icon: fa fa-github
-    link: https://github.com/gidztech/jest-puppeteer-docker
-    description:  Jest plugin that allows you to run your Jest tests against a Chrome instance running in Docker
   -
     name: Simple list item range selector
     icon: fa fa-github
     link: https://github.com/gidztech/simple-list-item-range-selector
-    description: Small UI library that allows you to take a list of items, e.g. `<li>`s, and attach selection events to it.
+    description: Small UI library that allows you to take a list of items, e.g. `<li>`s, and attach selection events to it
   -
     name: How to use a Mac textfield
     icon: fa fa-github
     link: https://github.com/gidztech/how-to-use-a-mac-textfield
-    description: Learn how to use a keyboard shortcuts on textfields on a Mac.
+    description: Learn how to use a keyboard shortcuts on textfields on a Mac
 contributions:
   - 
     name: Jest Puppeteer
