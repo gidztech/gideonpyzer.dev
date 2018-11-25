@@ -14,7 +14,7 @@ pluralizeListTitles = false
   avatar = "profile.jpg"
   author = "Gideon Pyzer"
   shortTitle = "Gideon Pyzer"
-  siteDescription = "I am a London based Front End Web Developer, currently working for Huddle, a cloud-based collaboration software company."
+  siteDescription = "I am a London based Front End Web Developer, currently working for Huddle, a cloud-based document collaboration software company."
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
