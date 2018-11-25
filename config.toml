@@ -1,4 +1,5 @@
 baseurl = "https://gideonpyzer.com/"
+siteDescription = "I am a London based Front End Web Developer, currently working for Huddle, a cloud-based collaboration software company."
 languageCode = "en-GB"
 title = "Gideon Pyzer - Web Developer"
 disqusShortname = "gideonpyzer"
@@ -14,7 +15,6 @@ pluralizeListTitles = false
   avatar = "profile.jpg"
   author = "Gideon Pyzer"
   shortTitle = "Gideon Pyzer"
-  description = "I'm a London based Front End Web Developer, currently working for Huddle, a cloud-based collaboration software company."
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
