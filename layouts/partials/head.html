@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ .Site.Params.Author }}" />
-    <meta name="description" content="{{- $url := replace .Permalink ( printf `%s` .Site.BaseURL) `` -}}{{- if eq $url `/` -}}{{- .Site.Params.SiteDescription -}}{{- else -}}{{- .Description -}} {{- end -}}">
+    <meta name="author" content="{{- .Site.Params.Author -}}" />
+    <meta name="description" content="{{- if .IsHome -}}{{- .Site.Params.SiteDescription -}}{{- else -}}{{- .Description -}} {{- end -}}">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="{{- $url := replace .Permalink ( printf `%s` .Site.BaseURL) `` -}}{{- if eq $url `/` -}}{{- .Site.Title -}}{{- else -}}{{- if .Params.heading -}} {{- .Params.heading -}} {{- else -}} {{- .Title -}} {{- end -}}{{- end -}}">
-    <meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}img/blog/{{.Params.image}}{{ else }}{{.Site.BaseURL}}img/profile.jpg{{ end }}">
-    <meta property="og:description" content="{{- $url := replace .Permalink ( printf `%s` .Site.BaseURL) `` -}}{{- if eq $url `/` -}}{{- .Site.Params.SiteDescription -}}{{- else -}}{{- .Description -}} {{- end -}}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{- if .IsHome -}}{{- .Site.Title -}}{{- else -}}{{- if .Params.heading -}} {{- .Params.heading -}} {{- else -}} {{- .Title -}} &nbsp;-&nbsp; {{- .Site.Params.shortTitle -}}  {{- end -}}{{- end -}}">
+    <meta property="og:image" content="{{- if .Params.image -}}{{.Site.BaseURL}}img/blog/{{.Params.image}}{{ else }}{{.Site.BaseURL}}img/profile.jpg{{ end }}">
+    <meta property="og:description" content="{{- if .IsHome -}}{{- .Site.Params.SiteDescription -}}{{- else -}}{{- .Description -}} {{- end -}}">
+    <meta property="og:site_name" content="{{- .Site.Title -}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/favicon.ico">
     <title>
-    {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
-    {{- if eq $url "" -}}
+    {{- if .IsHome -}}
         {{- .Site.Title -}}
     {{- else -}}
         {{- .Title -}} &nbsp;-&nbsp; {{- .Site.Params.shortTitle -}} 
