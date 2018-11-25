@@ -6,7 +6,7 @@
       {{ range $i, $el := .Site.Data.projects.my }}
         <h5>
           <i class="{{ .icon }}"></i>&nbsp;&nbsp;
-          <strong><a href="{{ .link }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
+          <strong><a href="{{ .link }}" title="{{ .name }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
         </h5>
       {{ end }}
       </div>
@@ -17,7 +17,7 @@
       {{ range $i, $el := .Site.Data.projects.contributions }}
         <h5>
           <i class="{{ .icon }}"></i>&nbsp;&nbsp;
-          <strong><a href="{{ .link }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
+          <strong><a href="{{ .link }}" title="{{ .name }}">{{ .name }}</a></strong>&nbsp;-&nbsp;{{ $el.description }}
         </h5>
       {{ end }}
       </div>
