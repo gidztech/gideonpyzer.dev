@@ -1,5 +1,5 @@
 +++
-title = "Docker-in-JS"
+title = "Docker-in-JS: A case study"
 description = "Recently I wrote a library called `jest-puppeteer-docker`, which provides a Docker setup for running your Jest Puppeteer tests. Here are the interesting decisions I made regarding the internals of it."
 tags = [
     "javascript",
@@ -23,15 +23,15 @@ Recently I wrote a library called [jest-puppeteer-docker](https://github.com/gid
 
 [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer) is a library for Jest that allows you to run browser-based UI tests using the Puppeteer API. It launches Chromium and handles the communication between the two.  
 
-I use [Visual Regression Testing](https://gideonpyzer.com/blog/visual-regression-testing/) to capture CSS regressions. I wrote an [article](https://gideonpyzer.com/blog/visual-regression-testing/) about it if you are not familiar with it. The main problem with using "jest-puppeteer" directly for this particular case is environmental differences in the rendering of the pages. Docker is a solution to that problem. 
+I use [Visual Regression Testing](https://gideonpyzer.com/blog/visual-regression-testing/) to capture CSS regressions. I wrote an [article](https://gideonpyzer.com/blog/visual-regression-testing/) about it if you are not familiar with it. The main problem with using "jest-puppeteer" directly **for this particular case** is environmental differences in the rendering of the pages. Docker is a solution to that problem. 
 
-## 😐 Easy (slow) solution
+## 😐 Easy solution (slow)
 One way to solve this is to launch a Docker container, `npm install`, copy the app over, and run `npm run test`. We can create a mount point to capture artefacts (e.g. test reports, failed screenshots), so that CI can report on these stats. 
 
 This is a perfectly valid solution, but this can be quite slow. Your CI is going to set up a clean environment with Docker installed, and then build a Docker image inside of that and start it up. This is going use a lot of resources and slow your app and tests down. 
 
 ## 🚀 Better solution (maybe)
-Another solution would be to run your app and tests directly in the CI environment, but run the browser itself in a container, and then communicate between the two. We can do that with [Remote debugging](https://chromedevtools.github.io/devtools-protocol/), connecting via a web socket. In order to achieve this, I created [jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker).
+Another solution would be to run your app and tests directly in the CI environment, but run the browser itself in a container, and then communicate between the two. We can do that with [Remote debugging](https://chromedevtools.github.io/devtools-protocol/), connecting via a WebSocket. In order to achieve this, I created [jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker).
 
 # 🔎 How jest-puppeteer-docker works
 
@@ -57,7 +57,7 @@ In order to use "jest-puppeteer", you need to have the peer dependency "puppetee
 ## Building Docker image
 We could create a Dockerfile and `apt-get` all the dependencies and pull the Chromium binary. However, building an image from scratch takes a while, so instead, I found [chrome-headless-trunk](https://hub.docker.com/r/alpeware/chrome-headless-trunk/) on Docker Hub. This provides pre-built versions of Chromium, tagged by revision. We can simply pull an image with a particular tag and we're ready.
 
-Now, to work out which revision to retrieve, We need to parse the `package.json` file. 
+Now, to work out which revision to retrieve, we need to parse the `package.json` file. 
 
 ```javascript
 const revision = require(path.resolve(puppeteerConfigPath)).puppeteer.chromium_revision;
@@ -79,12 +79,12 @@ FROM alpeware/chrome-headless-trunk:rev-609904
 
 
 ## Pulling Docker image
-The next thing we do is to build and run the container from JavaScript using [`exec`](https://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback).
+The next thing to do is to build and run the container from JavaScript using a promisified [`exec`](https://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback).
 
 `await exec('docker-compose -f docker-compose.yml build --pull chromium');` \
-`await exec('docker-compose -f docker-compose.yml build up -d');`
+`await exec('docker-compose -f docker-compose.yml up -d');`
 
-Once we're up, we need to connect to the Chromium instance and obtain a web socket.
+Once we're up, we need to connect to the Chromium instance and obtain a WebSocket.
 
 ```javascript
 const res = await request({
@@ -96,9 +96,9 @@ const res = await request({
 const webSocketUri = res.body.webSocketDebuggerUrl;
 ```
 
-*Note: This is not the exact code I'm using.*
+*Note: This is code is simplified for demonstration purposes.*
 
-Finally, we just need to pass the web socket we obtained to "jest-puppeteer", which will then hand over all the remaining work to it.
+Finally, we just need to pass the WebSocket we obtained to "jest-puppeteer", which will then hand over all the remaining work to it.
 
 ## 🌍 Accessing host from Docker container
 This was a nightmare. If you use the default bridge networking on Docker, you can access a server running on your host by IP. But when you have multiple network interfaces, things get complicated. 
@@ -153,9 +153,9 @@ if (chromiumArgs) {
 ```
 A problem I ran into later was the fact I needed to read the config file at two points in time. The first time is to read the Chromium arguments, which needs to be done before launching the container. 
 
-The second time, "jest-puppeteer" will require it in order to read the web socket from file. In Node, when you `require` something, it gets added to a cache. The next time you `require` the same file, it will fetch it from the cache instead. 
+The second time, "jest-puppeteer" will require it in order to read the WebSocket from file. In Node, when you `require` something, it gets added to a cache. The next time you `require` the same file, it will fetch it from the cache instead. 
 
-This is a problem because the web socket is not available the first time we `require` it and we need to the web socket to be read during the second time. The solution here is to delete the cache.
+This is a problem because the WebSocket is not available the first time we `require` it and we need the WebSocket to be read the second time round. The solution here is to delete the cache.
 
 ```javascript
 delete require.cache[path.resolve(process.env.JEST_PUPPETEER_CONFIG)];
@@ -170,7 +170,7 @@ ARG CHROMIUM_ADDITIONAL_ARGS
 ENV CHROMIUM_ADDITIONAL_ARGS=${CHROMIUM_ADDITIONAL_ARGS}
 ```
 
-We can finally append these args in our bash script running inside the container.
+We can now append the args to launch Chromium in our bash script running inside the container.
 
 ```bash
 CHROMIUM_ADDITIONAL_ARGS=$(echo $CHROMIUM_ADDITIONAL_ARGS | tr ',' ' ')
@@ -178,7 +178,9 @@ sh -c "/usr/bin/google-chrome-unstable $CHROME_ARGS $CHROMIUM_ADDITIONAL_ARGS"
 ```
 
 
-## 🎉 End result
-We're finally there. After a lot of steps and potentially dodgy hacks, we've provided a library that will automagically configure Docker images and containers within a Jest Puppeteer setup.
+## 🎉 Result
+After a lot of steps and potentially dodgy hacks, we've provided a library that will automagically configure Docker images and containers from JavaScript to be used with Jest Puppeteer.
+
+You can check out [jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker) for the full code. If you're interested in contributing, perhaps you know better ways of doing things and are completely horrified by my implementaton, do feel free to [create an issue](https://github.com/gidztech/jest-puppeteer-docker/issues/new).
 
 <img src="/img/blog/docker-in-js/example.png" alt="Example" />
