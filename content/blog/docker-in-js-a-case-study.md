@@ -19,7 +19,7 @@ highlight = "true"
 
 Recently I wrote a library called [jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker), which provides a Docker setup for running your Jest Puppeteer tests. Here are the interesting decisions I made regarding the internals of it.
 
-# 🏃‍♂️ Motivation
+# 🏃‍ Motivation
 
 [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer) is a library for Jest that allows you to run browser-based UI tests using the Puppeteer API. It launches Chromium and handles the communication between the two.  
 
