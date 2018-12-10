@@ -6,9 +6,10 @@ disqusShortname = "gideonpyzer"
 googleAnalytics = "UA-75005144-1"
 theme = "hugo-sustain"
 pluralizeListTitles = false
-
+enableRobotsTXT = true
+canonifyURLs = true
 [permalinks]
-  post = "/:year/:month/:day/:slug"
+    post = "/blog/:title/"
 
 [params]
   avatar = "profile.jpg"
