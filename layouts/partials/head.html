@@ -11,6 +11,18 @@
     <meta property="og:image" content="{{- if .Params.image -}}{{.Site.BaseURL}}img/blog/{{.Params.image}}{{ else }}{{.Site.BaseURL}}img/profile.jpg{{ end }}">
     <meta property="og:description" content="{{- if .IsHome -}}{{- .Site.Params.SiteDescription -}}{{- else -}}{{- .Description -}} {{- end -}}">
     <meta property="og:site_name" content="{{- .Site.Title -}}">
+    <meta name="twitter:site" content="@gidztech">
+    <meta name="twitter:creator" content="@gidztech">
+    {{ if .IsPage }}
+    <meta name="twitter:description" content="{{ .Description }}" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{.Site.BaseURL}}img/blog/{{.Params.image}}" /> 
+    {{ else }}
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" content="{{ .Site.Params.SiteDescription }}" /> 
+    {{ end }}
+
     <meta name="yandex-verification" content="af7e609bbbcc2d13" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/favicon.ico">
     <title>
