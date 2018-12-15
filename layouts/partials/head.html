@@ -24,6 +24,7 @@
     {{ end }}
 
     <meta name="yandex-verification" content="af7e609bbbcc2d13" />
+    {{ with .Params.robotsdisallow }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/favicon.ico">
     <title>
     {{- if .IsHome -}}

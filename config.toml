@@ -28,6 +28,11 @@ canonifyURLs = true
   LinkedIn      = "gideon-pyzer-87a14539"
   Stackoverflow = "users/1814840/gideon-pyzer?tab=profile"
 
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 ## Main Menu
 [[menu.main]]
   name = "Blog"
