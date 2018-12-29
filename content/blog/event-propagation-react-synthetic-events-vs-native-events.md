@@ -14,22 +14,22 @@ date = "2018-12-29"
 highlight = "true"
 +++
 
-# Context
+# 📄 Context
 Recently, I came across an interesting problem involving [Event Propagation](https://www.sitepoint.com/event-bubbling-javascript/) in React. I want to share my discovery around React's synthetic event system, in the hope that you won't spend several hours, like I did, questioning your existing understanding of JavaScript events.
 
 ## Events
 In order to explain the issue I had, let's briefly re-cap how events work in JavaScript. There are three phrases in Event Propagation: capture, target and bubble (in that order).
 
-### Capture Phase
+### ⛓ Capture Phase
 If you specify an event listener with the [`useCapture`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters) option, this tells the engine to invoke the that listener first, before the target's listener. If there are multiple capture listeners for the same event, they will fire in the order they are registered.
 
-### Target Phase
+### Ｘ Target Phase
 After the capture listeners, if any, the listeners attached to the target element are invoked.
 
-### Bubble Phase
+### 🛁 Bubble Phase
 The final phase is where all the target parent's event listeners are invoked, all the way up to the `window` object. You can stop the event from propagating to the next parent by calling `e.stopPropagation()`, where `e` is the event.
 
-### Event Delegation
+### 👉 Event Delegation
 We can avoid creating listeners for specific nodes by attaching a single event listener to a parent. We can then look at the target element (`e.target`) to determine if and what action to take by leveraging bubbling. This is called Event Delegation.
 
 # Modal Overlay Problem
@@ -104,8 +104,8 @@ handleKeyDown(e) {
 
 This should stop the event from bubbling to the parent, thereby preventing the modal from closing. However, when we try this, it still closes the modal. What is going wrong?
 
-# Investigation
-## Experiment
+# 🔎 Investigation
+## 🧪 Experiment
 I put some console logs in the event handlers to see what was going on. Pressing escape on the filter had the following result:
 
 ```
@@ -135,7 +135,7 @@ Trying this again, the dropdown closes and the modal remains open.
 FilterDropdown (Native): escape triggered with stopPropagation
 ```
 
-## Explanation
+## 👨‍🏫 Explanation
 It turns out, React uses Event Delegation behind the scenes, and uses its own event flow to determine which handlers to invoke. 
 
 
@@ -146,8 +146,8 @@ It turns out, React uses Event Delegation behind the scenes, and uses its own ev
 Since React uses a synthetic event system, the native event will go through the normal capture, target and bubbling phases, and then React's event flow will follow, provided that the native event doesn't stop propagation, as in my case.
 
 
-## Solution
+## 🎉 Solution
 In the mostly rare cases where you find yourself mixing React events and native events, don't! If you need Event Delegation, use only native event listeners for that particular event type. In all other cases, you should use React events, as they are come with performance benefits.
 
 ## More
-There is some discussion about changing the way React's events work, with suggestions such as React Root Listeners and Element Listeners. You can read the thread [DOM Event Mount Target Considerations](https://github.com/facebook/react/issues/13713). This is all part of the strategy for [React Fibre](https://github.com/facebook/react/issues/13525)
+There is some discussion about changing the way React's events work, with suggestions such as React Root Listeners and Element Listeners. You can read the thread [DOM Event Mount Target Considerations](https://github.com/facebook/react/issues/13713). This is all part of the strategy for [React Fire](https://github.com/facebook/react/issues/13525).
