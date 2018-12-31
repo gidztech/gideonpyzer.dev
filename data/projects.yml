@@ -5,7 +5,12 @@ my:
     name: Jest Puppeteer Docker
     icon: fa fa-github
     link: https://github.com/gidztech/jest-puppeteer-docker
-    description:  Jest preset plugin that allows you to run your Jest tests against a Chromium instance running in Docker
+    description: Jest preset plugin that allows you to run your Jest tests against a Chromium instance running in Docker
+  - 
+    name: Docker Chromium
+    icon: fa fa-github
+    link: https://github.com/gidztech/docker-chromium
+    description: Node library for controlling a Chromium instance running in a Docker container 
   - 
     name: Muppeteer
     icon: fa fa-github
