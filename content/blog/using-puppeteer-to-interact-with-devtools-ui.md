@@ -145,6 +145,6 @@ If you are wondering why the selector is really long and complicated, it's becau
 ## 😞 Problem
 Even though we are getting new network requests etc. in the main DevTools UI, we are not getting any blocked requests in the Adblock extension panel. Something has gone wrong.
 
-We don't automatically establish a connection with the Chrome Extension. It looks as though the communication mechanism with extensions is more complicated. See [Extending DevTools](https://developer.chrome.com/extensions/devtools).
+I think the problem is that Adblock attaches to a particular tab, and since we are running the debugger in a new tab, it's not going to receive messages about the other tab. Whether this is a problem for all extensions or just some I don't know. It looks as though the communication mechanism with extensions is complex. See [Extending DevTools](https://developer.chrome.com/extensions/devtools) for details.
 
-At this point, I gave up, as it's a whole new area for me to learn. I will likely revisit this when I know more about Chrome Extensions - a new excuse to create my own extension.
+At this point, I gave up trying to get it to work, as it's a whole new area for me. I will likely revisit this when I know more about Chrome Extensions - a new excuse to create my own.
