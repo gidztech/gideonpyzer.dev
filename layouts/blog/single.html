@@ -1,12 +1,8 @@
 {{ partial "head" . }}
   <body>
     <div id="wrap">
-
       <!-- Header -->
       {{ partial "header" . }}
-      {{ if isset .Params "showpagemeta" }}
-        {{ .Render "projects" }}
-      {{ else }}
       <div class="container">
         <div class="blog-post">
           <h3>
@@ -50,7 +46,6 @@
         {{ partial "disqus" . }}
         </div>
       </div>
-      {{ end }}
     </div>
 
     <!-- Footer -->

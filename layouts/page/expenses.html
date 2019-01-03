@@ -1,0 +1,47 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      {{ partial "header" . }}
+      <section id="expenses">
+        <div class="container">
+          <div class="panel panel-default">
+            <img class="center" src="/img/expenses.jpg" alt="Expenses" />
+            <div class="panel-body">
+                <div class="expenses">
+                    <h3>Expenses</h3>
+                    {{ range $i, $exp := .Site.Data.expenses.amounts }}
+                    <h4>{{ $exp.month }}</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Banking/Insurance</th>
+                                <th>Charity</th>
+                                <th>Eating Out</th>
+                                <th>Entertainment</th>
+                                <th>Exercise</th>
+                                <th>Phone</th>
+                                <th>Productivity</th>
+                                <th>Rent</th>
+                                <th>Shopping</th>
+                                <th>Travel</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                            {{ range $i, $val := $exp.values }}
+                                <td>£{{ $val }}</td>
+                            {{ end }}
+                            </tr>
+                        </tbody>
+                    </table>
+                    {{ end }}
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>          
+    </div>
+    <!-- Footer -->
+    {{ partial "footer" . }}
+  </body>
+</html>

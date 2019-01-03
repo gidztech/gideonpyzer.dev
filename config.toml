@@ -41,6 +41,16 @@ canonifyURLs = true
   url = "/blog/"
 [[menu.main]]
   name = "Projects"
-  identifier = "projects"
   weight = 200
+  identifier = "projects"
   url = "/projects/"
+[[menu.main]]
+  name = "Goals"
+  weight = 300
+  identifier = "goals"
+  url = "/goals/"
+[[menu.main]]
+  name = "Expenses"
+  weight = 400
+  identifier = "expenses"
+  url = "/expenses/"

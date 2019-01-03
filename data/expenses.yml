@@ -1,0 +1,27 @@
+categories:
+  - Banking & Insurance
+  - Charity
+  - Eating/Drinking Out
+  - Entertainment
+  - Exercise
+  - Phone
+  - Productivity
+  - Rent
+  - Shopping
+  - Travel
+
+amounts: 
+  - 
+    month: November 2018
+    values: 
+      - 26.49
+      - 15.41
+      - 404.43
+      - 52.43
+      - 128.98
+      - 83.95
+      - 13.53
+      - 615
+      - 134.27
+      - 171
+      - 1645.49

@@ -198,3 +198,27 @@ div.footer{
   padding-bottom: 15px;
   
 }*/
+
+.center {
+  text-align: center; 
+}
+.goals-grid {
+  display: grid; 
+  grid-template-columns: 50% 50%; 
+  grid-column-gap: 16px;
+}
+
+.goals-grid-column {
+  border: 1px solid #27A822;
+  padding: 0 16px;
+}
+
+.expenses table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.expenses table tr th, .expenses table tr td {
+  padding: 2px;
+  border: 1px solid black;
+}
