@@ -1,6 +1,6 @@
 ---
 title: "Expenses"
-description: "Expenses"
+description: Keeping track of monthly expenses"
 type: "page"
 layout: "expenses"
 ---
