@@ -1,7 +1,7 @@
 categories:
-  - Banking & Insurance
+  - Banking/Insurance
   - Charity
-  - Eating/Drinking Out
+  - Eating Out
   - Entertainment
   - Exercise
   - Phone
@@ -9,6 +9,9 @@ categories:
   - Rent
   - Shopping
   - Travel
+  - Gifts
+  - Misc
+  - Total
 
 amounts: 
   - 
@@ -24,4 +27,22 @@ amounts:
       - 615
       - 134.27
       - 171
+      - 0
+      - 0
       - 1645.49
+  - 
+    month: December 2018
+    values: 
+      - 26.49
+      - 15.41
+      - 569.85
+      - 202.39
+      - 111
+      - 83.95
+      - 6.58
+      - 615
+      - 187.26
+      - 178.76
+      - 83.95
+      - 52.10
+      - 2124.73
