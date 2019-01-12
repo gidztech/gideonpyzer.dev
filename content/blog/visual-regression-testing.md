@@ -187,22 +187,21 @@ One of the benefits of the framework is the abstractions for test setup. In Mupp
 
 The important part is the `assert.visual()` function. This is what performs the visual comparison. All you provide is a DOM selector for the component you want to take a screenshot of and the framework will do the rest.
 
-
 ```javascript
 describeComponent({ name: 'Panel' }, () => {
     describe('Simple mode', async () => {
-        it('title and body exist', async () => {
+        it('should have a title and body', async () => {
             ... omitted functional tests ...
         });
-        it('title and body appear correctly', async () => {
+        it('should position the title and body correctly', async () => {
             await assert.visual(panelContainer);
         });
     });
     describe('Icon mode', async () => {
-        it('title, body and icon exist', async () => {
+        it('should have a title, body and icon', async () => {
            ... omitted functional tests ...
         });
-        it('title, body and icon appear correctly', async () => {
+        it('should position the title, body and icon correctly', async () => {
             await assert.visual(panelContainer);
         });
     });
@@ -273,21 +272,21 @@ describe('Panel tests', async () => {
     });
 
     describe('Simple mode', async () => {
-        it('title and body exist', async () => {
+        it('should have a title and body', async () => {
             ... omitted functional tests ...
         });
 
-        it('title and body appear correctly', async () => {
+        it('should position the title and body correctly', async () => {
             await visualCheck(panelContainer);
         });
     });
 
     describe('Icon mode', () => {
-        it('title, body and icon exist', async () => {
+        it('should have a title, body and icon', async () => {
             ... omitted functional tests ...
         });
 
-        it('title, body and icon appear correctly', async () => {
+        it('should position the title, body and icon correctly', async () => {
             await visualCheck(panelContainer);
         });
     });
