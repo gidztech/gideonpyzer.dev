@@ -51,4 +51,4 @@ You can organize your code into categories. For example, pages and components, a
 
 # Final thoughts
 
-Marie found that her client's relationships improved when they were able to clear out and tidy their belongings. I think tensions between developers on projects could massively be reduced by applying these techniques. More time can be spent building great features instead of spending hours searching for one of eight similar, but different modal components in your codebase!
+Marie found that her client's relationships improved when they were able to clear out and tidy their belongings. I think tensions between developers on projects could massively be reduced by applying these techniques. More time can be spent building great features instead of spending hours searching for 1 of 8 similar, but slightly different, modal components in your codebase!
