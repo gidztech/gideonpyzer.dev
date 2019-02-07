@@ -13,10 +13,9 @@ categories:
   - Misc
   - Total
 
-amounts: 
-  - 
-    month: November 2018
-    values: 
+amounts:
+  - month: November 2018
+    values:
       - 26.49
       - 15.41
       - 404.43
@@ -30,9 +29,8 @@ amounts:
       - 0
       - 0
       - 1645.49
-  - 
-    month: December 2018
-    values: 
+  - month: December 2018
+    values:
       - 26.49
       - 15.41
       - 569.85
@@ -46,3 +44,18 @@ amounts:
       - 83.95
       - 52.10
       - 2124.73
+  - month: January 2019
+    values:
+      - 26.49
+      - 19.75
+      - 293.97
+      - 33.95
+      - 96.00
+      - 83.95
+      - 93.10
+      - 615.00
+      - 149.17
+      - 166.90
+      - 0.00
+      - 9.00
+      - 1587.28
