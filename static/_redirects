@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://gideonpyzer.dev/* https://gideonpyzer.com/:splat 301!
+https://www.gideonpyzer.dev/* https://gideonpyzer.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://heuristic-feynman-7cba21.netlify.com/* https://gideonpyzer.com/:splat 301!
