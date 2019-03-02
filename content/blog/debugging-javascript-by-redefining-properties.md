@@ -12,7 +12,7 @@ date = "2016-04-05"
 highlight = "true"
 +++
 
-In <a href="https://gideonpyzer.com/blog/debugging-javascript-by-redefining-functions/" ga-link-track="debugging-javascript-by-redefining-functions">Debugging JavaScript with Monkey Patching Functions</a>, we discussed how to inject our own debugging function calls into existing function definitions. Now we will do the same for properties, which involves a slightly different approach.
+In <a href="/blog/debugging-javascript-by-redefining-functions/" ga-link-track="debugging-javascript-by-redefining-functions">Debugging JavaScript with Monkey Patching Functions</a>, we discussed how to inject our own debugging function calls into existing function definitions. Now we will do the same for properties, which involves a slightly different approach.
 
 A `property` in JavaScript can either be a data descriptor, which has a simple `value` that is retrieved or assigned, or it can be an accessor descriptor, which has `get` and `set` functions. `cookie` is a property of the `document` object. It does a lot more than store a value; it has to interface with the browser, so it an example of an accessor property descriptor.
 

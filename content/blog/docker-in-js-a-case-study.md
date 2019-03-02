@@ -23,7 +23,7 @@ Recently I wrote a library called [jest-puppeteer-docker](https://github.com/gid
 
 [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer) is a library for Jest that allows you to run browser-based UI tests using the Puppeteer API. It launches Chromium and handles the communication between the two.
 
-I use [Visual Regression Testing](https://gideonpyzer.com/blog/visual-regression-testing/) to capture CSS regressions. I wrote an [article](https://gideonpyzer.com/blog/visual-regression-testing/) about it if you are not familiar with it. The main problem with using "jest-puppeteer" directly **for this particular case** is environmental differences in the rendering of the pages. Docker is a solution to that problem.
+I use [Visual Regression Testing](/blog/visual-regression-testing/) to capture CSS regressions. I wrote an [article](/blog/visual-regression-testing/) about it if you are not familiar with it. The main problem with using "jest-puppeteer" directly **for this particular case** is environmental differences in the rendering of the pages. Docker is a solution to that problem.
 
 ## 😐 Easy solution (slow)
 
