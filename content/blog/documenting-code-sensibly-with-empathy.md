@@ -1,6 +1,6 @@
 +++
 title = "Documenting code sensibly with empathy"
-description = "Documenting your code is vital when working on a project with multiple developers. But what is the correct level of documentation?"
+description = "Documenting your code is vital when working on a project involving a whole team. When you join a new team, you would hope that the work is in a state that would allow you to fairly comfortably pick up and roll with. As such, people should always strive to code with empathy for the other people on the team, both current and future."
 tags = [
     "documentation",
     "code",
