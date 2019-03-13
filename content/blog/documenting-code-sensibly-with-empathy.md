@@ -56,7 +56,7 @@ Let's just say, I've seen some crazy regex around with no comments, and I've wan
 ## 📝 Documenting code decisions
 How do you document decisions you've made in your code? You might read some code and wonder why the developer did it a particular way. This is particularly the case where the developer has done something a little different from the norm. Of course, sometimes doing something against the norm is a red flag, but in other cases, there may be legitimate reasons. 
 
-For example, you may have made the decision not to optimize some code because there's no need for it to scale. You might warn a future developer not to copy and paste this code for other features because of that limitation. Developers are lazy, copy and paste all the things.
+For example, you may have made the decision not to optimize some code because there's no need for it to scale. You might warn a future developer not to copy and paste this code for other features because of that limitation. Developers are lazy, they copy and paste all the things.
 
 I like to write comments in code where I've made a decision like this. Some people will argue that comments become out of date, but so does code. If your code is going to change, the comments that decorate it will likely change or be removed anyway. It's not a reason to avoid comments.
 
@@ -72,7 +72,7 @@ If you're using Atlassian products, Confluence is quite a good choice for this. 
 #### Architecture Decision Records (ADRs)
 As part of our software development lifecycle, we document project decisions in an [Architecture Decision Records (ADR)](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions). At the start of the project, we review the requirements and possible solutions to achieve the end goal, using [ATAM](https://en.wikipedia.org/wiki/Architecture_tradeoff_analysis_method). We may consider things like security, performance, testability. maintainability, etc. The ADR allows us to document what we have considered, and the final decision we made. It's a living document, so we can update it throughout the project. 
 
-This document is really useful because I can look up past features we've implemented and identity why we did something a particular way, and see the alternatives we considered.
+This document is really useful because I can look up past features we've implemented and identify why we did something a particular way, and see the alternatives we considered.
 
 ## Tests provide requirements documentation
 You can understand a lot about an application from looking at tests cases. They're usually written in BDD or TDD form, like `describe` and `it` blocks, so they are easy to read. The implementation details are blackboxed because all we see are the input and outputs. Once we understand that, when we need to update the code, we already have some context.
