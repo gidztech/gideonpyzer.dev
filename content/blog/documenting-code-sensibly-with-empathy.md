@@ -12,6 +12,9 @@ tags = [
 date = "2019-03-13"
 image = "documentation/code.jpg"
 highlight = "true"
+aliases = [
+    "/blog/documenting-code-sensibly-with-empathy"
+]
 +++
 
 # 🏃‍♂️ Motivation

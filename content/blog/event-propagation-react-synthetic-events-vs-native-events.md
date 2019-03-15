@@ -12,6 +12,9 @@ tags = [
 ]
 date = "2018-12-29"
 highlight = "true"
+aliases = [
+    "/blog/event-propagation-react-synthetic-events-vs-native-events"
+]
 +++
 
 # 📄 Context

@@ -13,6 +13,9 @@ tags = [
 image = "lambdas/lamb.jpg"
 date = "2017-02-05"
 highlight = "true"
+aliases = [
+    "/blog/create-an-aws-lambda-function-in-javascript"
+]
 +++
 
 ![](/img/blog/lambdas/lamb.jpg)*<span style="font-size: small; text-align: center; display: block">Lambda was named after a lamb that yelled "da!". It's true because I said it is.</span>*

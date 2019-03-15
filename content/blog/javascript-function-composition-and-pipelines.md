@@ -13,6 +13,9 @@ tags = [
 image = "composition/pipes.png"
 date = "2017-01-02"
 highlight = "true"
+aliases = [
+    "/blog/javascript-function-composition-and-pipelines"
+]
 +++
 
 ![Pipelines](/img/blog/composition/pipes.png)*<span style="font-size: small; text-align: center; display:block;">Pipeline functions are analogous to physical pipelines. See <a href="#pipelines">Pipelines</a> section.</span>*

@@ -13,6 +13,9 @@ tags = [
 image = "docker-in-js/heading.png"
 date = "2018-12-09"
 highlight = "true"
+aliases = [
+    "/blog/docker-in-js-a-case-study"
+]
 +++
 
 <img src="/img/blog/docker-in-js/heading.png" style="width: 400px; margin-top: 20px; border:0" />

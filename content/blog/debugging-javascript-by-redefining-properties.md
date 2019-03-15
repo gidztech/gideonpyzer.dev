@@ -10,6 +10,9 @@ tags = [
 image = "javascript.png"
 date = "2016-04-05"
 highlight = "true"
+aliases = [
+    "/blog/debugging-javascript-by-redefining-properties"
+]
 +++
 
 In <a href="/blog/debugging-javascript-by-redefining-functions/" ga-link-track="debugging-javascript-by-redefining-functions">Debugging JavaScript with Monkey Patching Functions</a>, we discussed how to inject our own debugging function calls into existing function definitions. Now we will do the same for properties, which involves a slightly different approach.

@@ -18,6 +18,9 @@ tags = [
 image = "visual-regression-testing/cat.png"
 date = "2018-06-25"
 highlight = "true"
+aliases = [
+    "/blog/visual-regression-testing"
+]
 +++
 
 <img src="/img/blog/visual-regression-testing/cat.png" style="width: 600px; margin-top: 20px; border:0" />

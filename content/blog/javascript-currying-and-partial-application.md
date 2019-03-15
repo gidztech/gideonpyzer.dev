@@ -13,6 +13,9 @@ tags = [
 image = "currying/curry.jpg"
 date = "2017-01-14"
 highlight = "true"
+aliases = [
+    "/blog/javascript-currying-and-partial-application"
+]
 +++
 
 ![](/img/blog/currying/curry.jpeg)*<span style="font-size: small; text-align: center; display: block">Currying is named after Haskell Curry, an American mathematician and logician.</span>*

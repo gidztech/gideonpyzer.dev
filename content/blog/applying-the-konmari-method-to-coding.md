@@ -10,6 +10,9 @@ tags = [
 date = "2019-01-31"
 image = "tidying/mess.jpg"
 highlight = "true"
+aliases = [
+    "/blog/applying-the-konmari-method-to-coding"
+]
 +++
 
 <img src="/img/blog/tidying/mess.jpg" style="width: 600px; margin-top: 20px; border:0" />

@@ -15,6 +15,9 @@ tags = [
 ]
 date = "2016-03-03"
 highlight = "true"
+aliases = [
+    "/blog/what-is-tcp-ip"
+]
 +++
 
 >  TCP/IP is the suite of communications protocols used to connect hosts on the Internet. TCP/IP uses several protocols, the two main ones being TCP and IP. -- <cite>[Webopedia][1]</cite>

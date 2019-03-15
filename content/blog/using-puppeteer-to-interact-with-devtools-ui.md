@@ -11,6 +11,9 @@ tags = [
 ]
 date = "2018-12-30"
 highlight = "true"
+aliases = [
+    "/blog/using-puppeteer-to-interact-with-devtools-ui"
+]
 +++
 
 # 📄 Context

@@ -12,7 +12,11 @@ tags = [
 image = "parseint/binary.jpg"
 date = "2017-06-06"
 highlight = "true"
+aliases = [
+    "/blog/use-parseint-for-strings-not-for-numbers"
+]
 +++
+
 ![](/img/blog/parseint/binary.jpg)
 
 So you have a decimal number that you want converted into an integer. You've come across `parseInt` and think to yourself, "Boy, that sounds like the right function for me!". So you try the following.

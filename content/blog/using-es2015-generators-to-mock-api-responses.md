@@ -14,6 +14,9 @@ tags = [
 image = "generators/generator.png"
 date = "2017-07-18"
 highlight = "true"
+aliases = [
+    "/blog/using-es2015-generators-to-mock-api-responses"
+]
 +++
 
 ![Generator](/img/blog/generators/generator.png)*<span style="font-size: small; text-align: center; display: block">Source: https://www.hondashop.com.au/</span>*

@@ -9,6 +9,9 @@ tags = [
 image = "javascript.png"
 date = "2016-03-26"
 highlight = "true"
+aliases = [
+    "/blog/debugging-javascript-by-redefining-functions"
+]
 +++
 
 There are hundreds of amazing debugging tools available for JavaScript in modern web browsers today. Breakpoints are particularly useful for debugging problems or can simply be used to understand a particular code base.

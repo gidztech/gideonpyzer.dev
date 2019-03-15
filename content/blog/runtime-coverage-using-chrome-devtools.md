@@ -15,6 +15,9 @@ tags = [
 image = "runtime-coverage/coverage.jpg"
 date = "2017-04-05"
 highlight = "true"
+aliases = [
+    "/blog/runtime-coverage-using-chrome-devtools"
+]
 +++
 
 ![Rail map](/img/blog/runtime-coverage/coverage.jpg)

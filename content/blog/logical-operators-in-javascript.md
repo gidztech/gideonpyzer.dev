@@ -11,6 +11,9 @@ tags = [
 image = "javascript.png"
 date = "2016-05-11"
 highlight = "true"
+aliases = [
+    "/blog/logical-operators-in-javascript"
+]
 +++
 
 > Logical operators are typically used with Boolean (logical) values. When they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value.

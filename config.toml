@@ -9,7 +9,7 @@ pluralizeListTitles = false
 enableRobotsTXT = true
 canonifyURLs = true
 [permalinks]
-    post = "/blog/:title/"
+    blog = "blog/:year/:month/:day/:title/"
 
 [params]
   avatar = "profile.jpg"
@@ -49,8 +49,3 @@ canonifyURLs = true
   weight = 300
   identifier = "goals"
   url = "/goals/"
-[[menu.main]]
-  name = "Expenses"
-  weight = 400
-  identifier = "expenses"
-  url = "/expenses/"

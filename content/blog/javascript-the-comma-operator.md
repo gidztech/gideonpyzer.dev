@@ -10,6 +10,9 @@ tags = [
 image = "javascript.png"
 date = "2016-02-25"
 highlight = "true"
+aliases = [
+    "/blog/javascript-the-comma-operator"
+]
 +++
 
 >The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand.

@@ -13,6 +13,9 @@ tags = [
 image = "hackathon/coding.jpg"
 date = "2017-12-26"
 highlight = "true"
+aliases = [
+    "/blog/things-i-learnt-from-a-hackathon"
+]
 +++
 
 ![Hackathon](/img/blog/hackathon/coding.jpg)
