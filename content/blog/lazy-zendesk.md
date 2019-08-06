@@ -1,6 +1,6 @@
 +++
 title = "Lazy loading Zendesk saved Huddle 2.3MB of JavaScript"
-description = "3rd party libraries and integrations are responsible for significant slowdowns in web app. We at Huddle were able to shed 3.1 MB of assets from the initial page load of our app."
+description = "3rd party libraries and integrations are responsible for significant slowdowns in web app. We at Huddle were able to shed 2.3 MB of assets from the initial page load of our app by implementing lazy loading of the Zendesk Help widget"
 tags = [
     "zendesk",
     "lazy loading",
