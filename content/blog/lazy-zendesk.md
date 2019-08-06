@@ -123,4 +123,4 @@ This solution works really well but there's a few things to consider:
 
 3. Some customers blacklist certain assets for security compliance reasons. Currently this results in no Help button appearing, but with the new change, we will see a Help button that doesn't function. Perhaps in this case, we could simply show a user friendly message when the iframe's `onError` event is fired.
 
-4. Zendesk maintains a WebSocket connection as soon as it's loaded. It may be possible to push certain things to the client to engage with online users. By only opening this connection when the user interacts with the button, we lose out on this potential engagement. But in our case, we don't use this so it's not a problem.
+4. Zendesk maintains a WebSocket connection as soon as it's loaded. It may be possible to push certain things to the client to engage with online users. By only opening this connection when the user interacts with the button, we lose out on this potential engagement. Our support team clarified that we don't make use of this and so the limitation was justified for us.
