@@ -37,7 +37,7 @@ But the problem is that the initial page load of the application includes 2.3 MB
 1. Assets that do not change will be served from browser cache (except cache-busting updates)
 2. Assets are served asynchronously, so it doesn't block the initial rendering of the application
 
-However, in the end, we are still parsing 2.3 MB of (uncompressed) JavaScript code, which is significant. The average impact, according to [Third Party Web](https://github.com/patrickhulce/third-party-web#third-parties-by-total-impact), is 667 ms.
+However, in the end, we are still parsing 2.3 MB of (after it's uncompressed) JavaScript code, which is significant. The average impact, according to [Third Party Web](https://github.com/patrickhulce/third-party-web#third-parties-by-total-impact), is 667 ms.
 
 There's a bandwidth, CPU and memory cost involved, and particularly on slower devices, the widget could begin to affect the responsiveness of the application itself.
 
