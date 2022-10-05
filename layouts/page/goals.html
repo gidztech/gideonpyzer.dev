@@ -10,14 +10,14 @@
             <div class="panel-body">
               <div class="goals-grid">
                 <div class="goals-grid-column">
-                  <h4 class="center">{{ .Site.Data.goals.milestones_title }}</h4>
-                  {{ range $i, $el := .Site.Data.goals.milestones }}
+                  <h4 class="center">{{ .Site.Data.goals.goals_title }} 📈</h4>
+                  {{ range $i, $el := .Site.Data.goals.goals }}
                     <p>{{ $el }}</p>
                   {{ end }}
                 </div>
                 <div class="goals-grid-column">
-                  <h4 class="center">{{ .Site.Data.goals.goals_title }}</h4>
-                  {{ range $i, $el := .Site.Data.goals.goals }}
+                  <h4 class="center">{{ .Site.Data.goals.milestones_title }} 🎉</h4>
+                  {{ range $i, $el := .Site.Data.goals.milestones }}
                     <p>{{ $el }}</p>
                   {{ end }}
                 </div>
